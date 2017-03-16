@@ -4,8 +4,8 @@
 package pl.uksw.java.lab.kalkulator;
 
 /**
- * @author Przemys³aw Gontarz
  * Klasa obs³uguj¹ca interfejs u¿ytkownika
+ * @author Przemys³aw Gontarz
  */
 public class Menu 
 {

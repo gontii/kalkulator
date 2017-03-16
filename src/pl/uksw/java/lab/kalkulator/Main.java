@@ -4,8 +4,9 @@
 package pl.uksw.java.lab.kalkulator;
 
 /**
- * @author Przemys³aw Gontarz
  * Powo³uje obiekt typu Menu i pozwala mu dzia³aæ
+ * @author Przemys³aw Gontarz
+ *
  */
 public class Main {
 
