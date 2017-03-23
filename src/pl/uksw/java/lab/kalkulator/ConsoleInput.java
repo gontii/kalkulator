@@ -24,7 +24,8 @@ public class ConsoleInput implements InputMode {
 	 */
 	@Override
 	public LineCalculations read() {
-		System.out.println("Wprowadz liniê obliczeñ i zakoñcz przyciskiem Enter: ");
+		System.out.println("Wprowadz liniê obliczeñ i zakoñcz przyciskiem Enter.");
+		System.out.println("Napis \"koniec\" koñczy wczytywanie kolejnych linijek.");
 		return new LineCalculations(keyboard.nextLine());
 	}
 }

@@ -20,6 +20,10 @@ public class Menu
 	 */
 	private Scanner scanner;
 	/**
+	 * Ostatnia wczytana linijka do obliczeñ
+	 */
+	private LineCalculations lc;
+	/**
 	 * Ustawia wartoœci domyœlne
 	 */
 	public Menu()
@@ -51,11 +55,19 @@ public class Menu
 			this.userOption = 0;
 		}
 	}
+	/**
+	 * Zarz¹dza przep³ywem poszczególnych trybów odczytu
+	 */
 	private void runOption() {
 		if (this.userOption == 1)
 		{
-			ConsoleInput ci = new ConsoleInput();
-			ci.read();
+			do {
+				ConsoleInput ci = new ConsoleInput();
+				lc = ci.read();
+			} while (lc.getLine().equals("koniec")== false); //odczyt dopóki zostanie napotkany koniec
+		}
+		else if (this.userOption == 2) {
+			//to do file input
 		}
 	}
 	/**

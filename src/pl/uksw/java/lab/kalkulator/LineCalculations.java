@@ -18,6 +18,9 @@ public class LineCalculations {
 	/**
 	 * Wynik obliczeñ
 	 */
+	public String getLine() {
+		return line;
+	}
 	private int result;
 	/**
 	 * Pole s³u¿¹ce do chwilowej wartoœci liczby przy odczytywania znaku
