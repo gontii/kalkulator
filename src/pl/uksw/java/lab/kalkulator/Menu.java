@@ -64,6 +64,8 @@ public class Menu
 			do {
 				ConsoleInput ci = new ConsoleInput();
 				lc = ci.read();
+				System.out.print("=");
+				lc.calculate();
 			} while (lc.getLine().equals("koniec")== false); //odczyt dopóki zostanie napotkany koniec
 		}
 		else if (this.userOption == 2) {
