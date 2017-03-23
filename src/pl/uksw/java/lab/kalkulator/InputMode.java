@@ -11,6 +11,7 @@ package pl.uksw.java.lab.kalkulator;
 public interface InputMode {
 	/**
 	 * Metoda wprowadzaj¹ca odczytuj¹ca dane wejœciowe
+	 * @return Ostatnio wczytana linijka obliczeñ
 	 */
-	public void read();
+	public LineCalculations read();
 }

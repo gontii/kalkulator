@@ -23,8 +23,8 @@ public class ConsoleInput implements InputMode {
 	 * @see pl.uksw.java.lab.kalkulator.InputMode#read()
 	 */
 	@Override
-	public void read() {
+	public LineCalculations read() {
 		System.out.println("Wprowadz liniê obliczeñ i zakoñcz przyciskiem Enter: ");
-		LineCalculations lc = new LineCalculations(keyboard.nextLine());
+		return new LineCalculations(keyboard.nextLine());
 	}
 }
