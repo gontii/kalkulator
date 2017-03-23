@@ -16,11 +16,15 @@ public class LineCalculations {
 	 */
 	private String line;
 	/**
-	 * Wynik obliczeñ
+	 * Pobiera wartoœæ pola line z wczytan¹ ostatni¹ linijk¹
+	 * @return Linijka z obliczeniami
 	 */
 	public String getLine() {
 		return line;
 	}
+	/**
+	 * Wynik obliczeñ
+	 */
 	private int result;
 	/**
 	 * Pole s³u¿¹ce do chwilowej wartoœci liczby przy odczytywania znaku
