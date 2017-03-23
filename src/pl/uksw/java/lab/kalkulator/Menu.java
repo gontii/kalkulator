@@ -51,6 +51,13 @@ public class Menu
 			this.userOption = 0;
 		}
 	}
+	private void runOption() {
+		if (this.userOption == 1)
+		{
+			ConsoleInput ci = new ConsoleInput();
+			ci.read();
+		}
+	}
 	/**
 	 * Metoda odczytuj¹ca wybór u¿ytkownika
 	 */
@@ -65,6 +72,7 @@ public class Menu
 	{
 		printMenu();
 		readOption();
+		runOption();
 		System.out.println();
 		System.out.println("Koniec programu.");
 	}
