@@ -3,6 +3,7 @@
  */
 package pl.uksw.java.lab.kalkulator;
 
+import java.io.FileNotFoundException;
 import java.util.Scanner;
 
 /**
@@ -22,13 +23,14 @@ public class Menu
 	/**
 	 * Ostatnia wczytana linijka do obliczeñ
 	 */
-	private LineCalculations lc;
+	private LineCalculations lineCalculations;
 	/**
 	 * Ustawia wartoœci domyœlne
 	 */
 	public Menu()
 	{
 		setUserOption(0);
+		this.lineCalculations = null;
 	}
 	/**
 	 * Zwraca wartoœæ pola userOption
@@ -57,23 +59,30 @@ public class Menu
 	}
 	/**
 	 * Zarz¹dza przep³ywem poszczególnych trybów odczytu
+	 * @throws FileNotFoundException Nie znaleziono pliku do odczytu
 	 */
-	private void runOption() {
+	private void runOption() throws FileNotFoundException {
 		if (this.userOption == 1)
 		{
 			do {
-				ConsoleInput ci = new ConsoleInput();
-				lc = ci.read();
-				if (lc.getLine().equals("koniec")== true)
+				ConsoleInput consoleInput = new ConsoleInput();
+				lineCalculations = consoleInput.read();
+				if (lineCalculations.getLine().equals("koniec")== true)
 				{
 					return;
 				}
 				System.out.print("=");
-				lc.calculate();
-			} while (lc.getLine().equals("koniec")== false); //odczyt dopóki zostanie napotkany koniec
+				lineCalculations.calculate();
+			} while (lineCalculations.getLine().equals("koniec")== false); //odczyt dopóki zostanie napotkany koniec
 		}
 		else if (this.userOption == 2) {
-			//to do file input
+			FileInput fileinput = new FileInput();
+			lineCalculations = fileinput.read();
+			while (lineCalculations != null)
+			{
+				
+				lineCalculations = fileinput.read();
+			}
 		}
 	}
 	/**
@@ -85,8 +94,9 @@ public class Menu
 	}
 	/**
 	 * Metoda organizuj¹ca sterowanie programem. Zawiera wywo³anie poszczególnych funkcji programu oraz steruje jego dzia³aniem
+	 * @throws FileNotFoundException Nie zosta³ otwarty plik do odczytu
 	 */
-	public void run()
+	public void run() throws FileNotFoundException
 	{
 		printMenu();
 		readOption();
