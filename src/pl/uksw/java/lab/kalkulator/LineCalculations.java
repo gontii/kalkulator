@@ -28,7 +28,7 @@ public class LineCalculations {
 	private int result;
 	/**
 	 * Konstruktor wprowadzaj¹cy linijkê, która bêdzie obliczona
-	 * @param line
+	 * @param line Linijka obliczeñ
 	 */
 	public LineCalculations(String line) {
 		this.line=line;

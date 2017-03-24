@@ -18,7 +18,7 @@ public class FileInput implements InputMode {
 	private Scanner file;
 	/**
 	 * Konstruktor otwiera plik do odczytu
-	 * @throws FileNotFoundException 
+	 * @throws FileNotFoundException Brak pliku do otwarcia
 	 */
 	public FileInput() throws FileNotFoundException {
 		file = new Scanner(new File("calculations.txt"));
