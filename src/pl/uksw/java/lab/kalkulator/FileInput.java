@@ -29,7 +29,13 @@ public class FileInput implements InputMode {
 	@Override
 	public LineCalculations read() {
 		// TODO Auto-generated method stub
-		return null;
+		if (file.hasNextLine())
+		{
+			return new LineCalculations(file.nextLine());
+		}
+		else
+		{
+			return null;
+		}
 	}
-
 }

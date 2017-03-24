@@ -80,8 +80,10 @@ public class Menu
 			lineCalculations = fileinput.read();
 			while (lineCalculations != null)
 			{
-				
-				lineCalculations = fileinput.read();
+				System.out.println(lineCalculations.getLine());
+				System.out.print("=");
+				lineCalculations.calculate();
+				lineCalculations = fileinput.read(); //wczytanie kolejnej linijki
 			}
 		}
 	}
